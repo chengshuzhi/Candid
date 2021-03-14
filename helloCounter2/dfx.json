@@ -1,0 +1,34 @@
+{
+  "canisters": {
+    "helloCounter2": {
+      "main": "src/helloCounter2/main.mo",
+      "type": "motoko"
+    },
+    "helloCounter2_assets": {
+      "dependencies": [
+        "helloCounter2"
+      ],
+      "frontend": {
+        "entrypoint": "src/helloCounter2_assets/public/index.js"
+      },
+      "source": [
+        "src/helloCounter2_assets/assets",
+        "dist/helloCounter2_assets/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "packtool": ""
+    }
+  },
+  "dfx": "0.6.21",
+  "networks": {
+    "local": {
+      "bind": "127.0.0.1:8000",
+      "type": "ephemeral"
+    }
+  },
+  "version": 1
+}
